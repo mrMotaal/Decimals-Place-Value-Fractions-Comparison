@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Revision: Reading, Relating & Comparing Decimals | Ahmed Abd El-Motaal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=STIX+Two+Math&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <style>
+        :root {
+            --bg-gradient-start: #f0f7ff;
+            --bg-gradient-mid: #e0f2fe;
+            --bg-gradient-end: #dbeafe;
+            --card-bg: rgba(255, 255, 255, 0.90);
+            --card-border: #bae6fd;
+            --primary-blue: #0284c7;
+            --primary-dark: #0369a1;
+            --accent-navy: #1e3a8a;
+            --accent-magenta: #b91c7c;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --line-color: #94a3b8;
+            --solution-bg: #f0fdf4;
+            --solution-border: #86efac;
+            --solution-text: #14532d;
+            --shadow-soft: 0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 8px 10px -6px rgba(2, 132, 199, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 1.5rem 2rem;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            max-width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid var(--card-border);
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .header-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 1.15rem;
+            border-bottom: 2px dashed #bae6fd;
+        }
+
+        .worksheet-title-group h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--accent-navy);
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .worksheet-title-group p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        .branding-badges {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .teacher-badge {
+            background: linear-gradient(135deg, #0284c7 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 0.65rem 1.35rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.96rem;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 0 #0f172a, 0 6px 12px rgba(2, 132, 199, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            white-space: nowrap;
+        }
+
+        .youtube-badge {
+            background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.65rem 1.3rem;
+            border-radius: 9999px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+            border: 1px solid #b91c1c;
+            box-shadow: 0 4px 0 #991b1b, 0 6px 14px rgba(220, 38, 38, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            white-space: nowrap;
+            transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease, background 0.15s ease;
+        }
+
+        .youtube-badge:hover {
+            background: linear-gradient(180deg, #f87171 0%, #dc2626 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 0 #991b1b, 0 8px 16px rgba(220, 38, 38, 0.38);
+        }
+
+        .youtube-badge:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #991b1b, 0 2px 4px rgba(220, 38, 38, 0.25);
+        }
+
+        .youtube-badge svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .student-info-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            padding-top: 1.15rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--accent-navy);
+        }
+
+        .info-field {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .info-field.name-field {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .info-line {
+            flex: 1;
+            border-bottom: 2px dotted #64748b;
+            height: 1.4rem;
+            display: inline-block;
+            min-width: 200px;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .section-title {
+            width: 100%;
+            max-width: 100%;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 0.9rem 1.5rem;
+            border-radius: 16px;
+            border: 1.5px solid #bae6fd;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.06);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title-text {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .section-title .arrow-icon {
+            color: #0284c7;
+            font-size: 1.1rem;
+        }
+
+        .toolbar-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn-3d {
+            appearance: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 0.65rem 1.25rem;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease, background-color 0.15s ease;
+            user-select: none;
+        }
+
+        .btn-3d.primary {
+            background: linear-gradient(180deg, #0ea5e9 0%, #0284c7 100%);
+            color: #ffffff;
+            border: 1px solid #0369a1;
+            box-shadow: 0 4px 0 #0369a1, 0 6px 12px rgba(2, 132, 199, 0.25);
+        }
+
+        .btn-3d.primary:hover {
+            background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 0 #0369a1, 0 8px 15px rgba(2, 132, 199, 0.3);
+        }
+
+        .btn-3d.primary:active,
+        .btn-3d.primary.active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #0369a1, 0 2px 4px rgba(2, 132, 199, 0.2);
+        }
+
+        .btn-3d.emerald {
+            background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            border: 1px solid #047857;
+            box-shadow: 0 4px 0 #047857, 0 6px 12px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-3d.emerald:hover {
+            background: linear-gradient(180deg, #34d399 0%, #059669 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 0 #047857, 0 8px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-3d.emerald:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #047857, 0 2px 4px rgba(16, 185, 129, 0.2);
+        }
+
+        .questions-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        /* Concept Group Header placed before a group of questions sharing the same idea (MUST use <h3> tag) */
+        h3.concept-group-header {
+            width: 100%;
+            background: linear-gradient(90deg, #0284c7 0%, #1e3a8a 100%);
+            color: #ffffff;
+            font-size: 1.08rem;
+            font-weight: 800;
+            padding: 0.75rem 1.35rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.18);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            letter-spacing: 0.01em;
+            margin-top: 0.25rem;
+            margin-bottom: -0.5rem;
+        }
+
+        .question-card {
+            width: 100%;
+            max-width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid var(--card-border);
+            border-radius: 20px;
+            padding: 1.75rem 2rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            transition: border-color 0.2s ease;
+        }
+
+        .question-card:hover {
+            border-color: #7dd3fc;
+        }
+
+        .concept-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(90deg, #e0f2fe 0%, #f0f9ff 100%);
+            border-left: 4px solid #0284c7;
+            border-top: 1px solid #bae6fd;
+            border-right: 1px solid #bae6fd;
+            border-bottom: 1px solid #bae6fd;
+            color: #0369a1;
+            font-weight: 800;
+            font-size: 0.92rem;
+            padding: 0.35rem 0.95rem;
+            border-radius: 8px;
+            margin-bottom: 0.85rem;
+            letter-spacing: 0.01em;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .q-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #fff1f2;
+            border: 2px solid #be123c;
+            color: #be123c;
+            font-weight: 800;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 5px rgba(190, 18, 60, 0.15);
+        }
+
+        .self-eval-tag {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            box-shadow: 0 2px 4px rgba(217, 119, 6, 0.25);
+        }
+
+        .q-prompt-intro {
+            font-size: 1.12rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .sub-questions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.65rem 1.25rem;
+            margin: 0.75rem 0 1.15rem 0;
+            padding-left: 0.5rem;
+        }
+
+        .sub-q-item {
+            font-size: 1.12rem;
+            font-weight: 600;
+            color: #0f172a;
+            display: flex;
+            align-items: baseline;
+            gap: 0.55rem;
+        }
+
+        .sub-q-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 26px;
+            height: 24px;
+            padding: 0 5px;
+            border-radius: 6px;
+            background: #e0f2fe;
+            border: 1.5px solid #0284c7;
+            color: #0369a1;
+            font-size: 0.85rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .figure-container {
+            width: 100%;
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin: 0.85rem 0 1.25rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.02);
+        }
+
+        .geometry-svg {
+            width: 100%;
+            max-width: 760px;
+            height: auto;
+            overflow: visible;
+        }
+
+        .math-label {
+            font-family: 'STIX Two Math', 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: 700;
+            fill: #0f172a;
+            font-size: 18px;
+        }
+
+        .measure-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            fill: #0f172a;
+            font-size: 14.5px;
+        }
+
+        .q-main-question {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.15rem;
+            padding-left: 0.25rem;
+        }
+
+        .choices-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.9rem 1.5rem;
+            margin-bottom: 1.35rem;
+        }
+
+        @media (min-width: 900px) {
+            .choices-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 540px) {
+            .choices-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .choice-btn {
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-radius: 14px;
+            padding: 0.75rem 1.1rem;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            transition: all 0.15s ease;
+            text-align: left;
+            box-shadow: 0 3px 0 #cbd5e1;
+        }
+
+        .choice-btn:hover {
+            border-color: #0284c7;
+            background: #f0f9ff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 0 #7dd3fc;
+        }
+
+        .choice-btn.selected-correct {
+            background: #dcfce7;
+            border-color: #16a34a;
+            color: #14532d;
+            box-shadow: 0 3px 0 #16a34a;
+        }
+
+        .choice-btn.selected-wrong {
+            background: #fee2e2;
+            border-color: #dc2626;
+            color: #7f1d1d;
+            box-shadow: 0 3px 0 #dc2626;
+        }
+
+        .choice-letter {
+            font-weight: 800;
+            color: #0369a1;
+        }
+
+        .choice-status-badge {
+            margin-left: auto;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .workspace-label {
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .workspace {
+            background: rgba(255, 255, 255, 0.65);
+            border: 1.5px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 0.4rem 1.25rem 0.65rem 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .writing-line {
+            width: 100%;
+            height: 1.65rem;
+            border-bottom: 1.5px dashed var(--line-color);
+        }
+
+        .solution-box {
+            display: none;
+            margin-top: 1.25rem;
+            background: var(--solution-bg);
+            border: 2px solid var(--solution-border);
+            border-radius: 16px;
+            padding: 1.35rem 1.6rem;
+            color: var(--solution-text);
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        .solution-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .solution-header {
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: #15803d;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1.5px dashed #86efac;
+            padding-bottom: 0.5rem;
+        }
+
+        .solution-steps {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            font-size: 1.05rem;
+        }
+
+        .solution-steps li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .solution-steps li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        .final-answer-pill {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background: #16a34a;
+            color: #ffffff;
+            font-weight: 800;
+            padding: 0.4rem 1.1rem;
+            border-radius: 999px;
+            font-size: 1rem;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 2rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid var(--card-border);
+            border-radius: 20px;
+            padding: 1.25rem 2rem;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-info {
+            font-weight: 700;
+            color: var(--accent-navy);
+            font-size: 0.98rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        /* STRICT 2-QUESTIONS-PER-A4-PAGE PRINT LAYOUT (ZERO SPLITTING / ZERO SPILLOVER) */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 6mm 8mm;
+            }
+            body {
+                background: #ffffff !important;
+                padding: 0 !important;
+                color: #000000 !important;
+                font-size: 11.5px !important;
+                line-height: 1.3 !important;
+            }
+            header {
+                box-shadow: none !important;
+                border: 1.5px solid #0284c7 !important;
+                padding: 0.4rem 0.8rem !important;
+                margin-bottom: 0.35rem !important;
+                border-radius: 10px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .header-top {
+                padding-bottom: 0.3rem !important;
+                gap: 0.4rem !important;
+            }
+            .worksheet-title-group h1 {
+                font-size: 1.1rem !important;
+            }
+            .worksheet-title-group p {
+                font-size: 0.74rem !important;
+                margin-top: 0 !important;
+            }
+            .student-info-strip {
+                padding-top: 0.3rem !important;
+                font-size: 0.84rem !important;
+            }
+            .info-line {
+                height: 0.9rem !important;
+            }
+            .teacher-badge {
+                background: #f0f9ff !important;
+                color: #0f172a !important;
+                border: 1px solid #0284c7 !important;
+                box-shadow: none !important;
+                padding: 0.25rem 0.65rem !important;
+                font-size: 0.75rem !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .youtube-badge {
+                background: #fff1f2 !important;
+                color: #be123c !important;
+                border: 1px solid #be123c !important;
+                box-shadow: none !important;
+                padding: 0.25rem 0.65rem !important;
+                font-size: 0.75rem !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .youtube-badge svg {
+                fill: #be123c !important;
+                width: 13px !important;
+                height: 13px !important;
+            }
+            .toolbar,
+            .section-title,
+            .toolbar-actions,
+            .card-actions .btn-3d {
+                display: none !important;
+            }
+            .questions-grid {
+                gap: 0.35rem !important;
+                margin-bottom: 0.3rem !important;
+            }
+            h3.concept-group-header {
+                background: #e0f2fe !important;
+                color: #0369a1 !important;
+                border: 1.5px solid #0284c7 !important;
+                box-shadow: none !important;
+                font-size: 0.82rem !important;
+                padding: 0.22rem 0.65rem !important;
+                border-radius: 8px !important;
+                margin: 0.1rem 0 0.05rem 0 !important;
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .question-card {
+                box-shadow: none !important;
+                border: 1.5px solid #64748b !important;
+                border-radius: 10px !important;
+                padding: 0.45rem 0.75rem !important;
+                margin-bottom: 0 !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .question-card:nth-of-type(2n) {
+                page-break-after: always !important;
+                break-after: page !important;
+            }
+            .question-card:last-of-type {
+                page-break-after: auto !important;
+                break-after: auto !important;
+            }
+            .concept-badge {
+                font-size: 0.74rem !important;
+                padding: 0.12rem 0.55rem !important;
+                margin-bottom: 0.25rem !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .q-header {
+                margin-bottom: 0.25rem !important;
+                gap: 0.4rem !important;
+            }
+            .q-number {
+                width: 24px !important;
+                height: 24px !important;
+                font-size: 0.82rem !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .self-eval-tag {
+                font-size: 0.65rem !important;
+                padding: 0.12rem 0.5rem !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .q-prompt-intro {
+                font-size: 0.88rem !important;
+                line-height: 1.25 !important;
+            }
+            .sub-questions {
+                margin: 0.15rem 0 0.25rem 0 !important;
+                gap: 0.12rem 0.75rem !important;
+            }
+            .sub-q-item {
+                font-size: 0.84rem !important;
+            }
+            .sub-q-badge {
+                min-width: 18px !important;
+                height: 17px !important;
+                font-size: 0.68rem !important;
+            }
+            .figure-container {
+                padding: 0.2rem 0.45rem !important;
+                margin: 0.2rem 0 0.25rem 0 !important;
+                border-radius: 8px !important;
+            }
+            .geometry-svg {
+                max-height: 92px !important;
+                width: auto !important;
+            }
+            .q-main-question {
+                font-size: 0.9rem !important;
+                margin-bottom: 0.25rem !important;
+            }
+            .choices-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 0.3rem !important;
+                margin-bottom: 0.25rem !important;
+            }
+            .choice-btn {
+                box-shadow: none !important;
+                border: 1px solid #64748b !important;
+                padding: 0.18rem 0.45rem !important;
+                font-size: 0.8rem !important;
+                border-radius: 6px !important;
+            }
+            .card-actions {
+                margin-bottom: 0.1rem !important;
+            }
+            .workspace-label {
+                font-size: 0.68rem !important;
+            }
+            .workspace {
+                padding: 0.1rem 0.55rem 0.2rem 0.55rem !important;
+                margin-top: 0.1rem !important;
+                border-radius: 6px !important;
+            }
+            .writing-line {
+                height: 0.88rem !important;
+                border-bottom: 1px dashed #64748b !important;
+            }
+            /* Automatically trim excess writing lines in print so 2 questions NEVER overflow A4 or split across pages */
+            .writing-line:nth-child(n+13) {
+                display: none !important;
+            }
+            .question-card:has(.figure-container) .writing-line:nth-child(n+10) {
+                display: none !important;
+            }
+            footer {
+                box-shadow: none !important;
+                border: 1.5px solid #0284c7 !important;
+                padding: 0.35rem 0.8rem !important;
+                margin-top: 0.3rem !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .footer-info {
+                font-size: 0.76rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div class="worksheet-title-group">
+                    <h1>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="3 19 9 5 21 5 17 19 3 19"></polygon>
+                        </svg>
+                        Decimals: Place Value, Fractions &amp; Comparison
+                    </h1>
+                    <p>Comprehensive Revision (Lessons 1–4: Reading, Writing, Relating &amp; Comparing Decimals to Thousandths)</p>
+                </div>
+                <div class="branding-badges">
+                    <div class="teacher-badge">
+                        <span>👨‍🏫 Ahmed Abd El-Motaal</span>
+                        <span>|</span>
+                        <span>📞 01019775590</span>
+                    </div>
+                    <a href="https://youtube.com/@mrmotaal?si=myKXUVJPjbDazSVJ" target="_blank" rel="noopener noreferrer" class="youtube-badge" title="Visit Ahmed Abd El-Motaal YouTube Channel">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <span>YouTube: @mrMotaal</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="student-info-strip">
+                <div class="info-field name-field">
+                    <span>Student Name:</span>
+                    <span class="info-line"></span>
+                </div>
+                <div class="info-field">
+                    <span>Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / 202___</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <div class="section-title" style="margin-bottom: 0;">
+                <div class="section-title-text">
+                    <span class="arrow-icon">►</span>
+                    <span>Master Revision Sheet: Decimals to Thousandths (Lessons 1–4)</span>
+                </div>
+                <div class="toolbar-actions">
+                    <button class="btn-3d primary" id="global-toggle-btn" onclick="toggleAllSolutions()">
+                        <span>👁️ Show All Solutions</span>
+                    </button>
+                    <button class="btn-3d emerald" onclick="window.print()">
+                        <span>🖨️ Print / Save PDF</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="questions-grid">
+
+            <!-- =========================================================================
+                 LESSON 1: READING AND WRITING DECIMALS (Pages 94–97)
+                 ========================================================================= -->
+            <h3 class="concept-group-header">📌 Lesson 1: Reading and Writing Decimals (Standard, Expanded &amp; Word Forms)</h3>
+
+            <!-- QUESTION 1 (Lesson 1: Place-Value Chart & Forms of a Decimal) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Place-Value Chart: Standard, Expanded &amp; Word Forms</div>
+                <div class="q-header">
+                    <span class="q-number">1</span>
+                    <span class="q-prompt-intro">Use the place-value chart below to write $5.273$ and the Atlantic Bluefin tuna's average length ($6.5\text{ feet}$) in expanded form and word form, and state two equivalent decimals for $0.2$:</span>
+                </div>
+
+                <div class="figure-container">
+                    <svg class="geometry-svg" viewBox="0 0 720 125">
+                        <!-- Place-Value Chart -->
+                        <rect x="20" y="12" width="680" height="98" rx="10" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
+                        <line x1="20" y1="54" x2="700" y2="54" stroke="#0284c7" stroke-width="1.8"/>
+                        <!-- Vertical column dividers -->
+                        <line x1="125" y1="12" x2="125" y2="110" stroke="#bae6fd" stroke-width="1.5"/>
+                        <line x1="230" y1="12" x2="230" y2="110" stroke="#bae6fd" stroke-width="1.5"/>
+                        <line x1="335" y1="12" x2="335" y2="110" stroke="#0284c7" stroke-width="2.2"/>
+                        <line x1="450" y1="12" x2="450" y2="110" stroke="#bae6fd" stroke-width="1.5"/>
+                        <line x1="575" y1="12" x2="575" y2="110" stroke="#bae6fd" stroke-width="1.5"/>
+
+                        <!-- Headers -->
+                        <text x="72" y="38" class="measure-label" fill="#0369a1" font-weight="800" text-anchor="middle">Hundreds</text>
+                        <text x="177" y="38" class="measure-label" fill="#0369a1" font-weight="800" text-anchor="middle">Tens</text>
+                        <text x="282" y="38" class="measure-label" fill="#0369a1" font-weight="800" text-anchor="middle">Ones</text>
+                        <text x="392" y="38" class="measure-label" fill="#be123c" font-weight="800" text-anchor="middle">Tenths</text>
+                        <text x="512" y="38" class="measure-label" fill="#be123c" font-weight="800" text-anchor="middle">Hundredths</text>
+                        <text x="637" y="38" class="measure-label" fill="#be123c" font-weight="800" text-anchor="middle">Thousandths</text>
+
+                        <!-- Digits of 5.273 -->
+                        <text x="282" y="90" font-family="Inter, sans-serif" font-size="24" font-weight="800" fill="#0f172a" text-anchor="middle">5</text>
+                        <circle cx="335" cy="86" r="4" fill="#be123c"/>
+                        <text x="392" y="90" font-family="Inter, sans-serif" font-size="24" font-weight="800" fill="#be123c" text-anchor="middle">2</text>
+                        <text x="512" y="90" font-family="Inter, sans-serif" font-size="24" font-weight="800" fill="#be123c" text-anchor="middle">7</text>
+                        <text x="637" y="90" font-family="Inter, sans-serif" font-size="24" font-weight="800" fill="#be123c" text-anchor="middle">3</text>
+                    </svg>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-1" onclick="toggleSolution(1)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-1">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 1</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) For $5.273$:</strong><br>
+                            • <strong>Expanded form:</strong> $5 \times 1 + 2 \times \left(\dfrac{1}{10}\right) + 7 \times \left(\dfrac{1}{100}\right) + 3 \times \left(\dfrac{1}{1,000}\right) = 5 + 0.2 + 0.07 + 0.003$<br>
+                            • <strong>Word form:</strong> five and two hundred seventy-three thousandths.</li>
+                        <li><strong>2) For the Atlantic Bluefin tuna ($6.5\text{ feet}$):</strong><br>
+                            • <strong>Expanded form:</strong> $6 + 0.5$ &nbsp;&nbsp;|&nbsp;&nbsp; • <strong>Word form:</strong> six and five tenths.</li>
+                        <li><strong>3) Equivalent Decimals for $0.2$:</strong><br>
+                            $2\text{ tenths} = 20\text{ hundredths} = 200\text{ thousandths} \implies 0.2 = 0.20 = 0.200$.</li>
+                    </ul>
+                    <div class="final-answer-pill">$5.273 = 5 + 0.2 + 0.07 + 0.003$ &nbsp;|&nbsp; $0.2 = 0.20 = 0.200$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 2 (Lesson 1: Step-by-Step & Practice Forms — Pages 95–96) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Converting Between Standard, Expanded &amp; Word Forms</div>
+                <div class="q-header">
+                    <span class="q-number">2</span>
+                    <span class="q-prompt-intro">Write each number in the requested forms (Pages 95–96):</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>$34.032$ (Expanded &amp; Word forms)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>$0.982$ (Expanded &amp; Word forms)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">3</span><span>$96.24$ (Expanded &amp; Word forms)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">4</span><span>$10.037$ (Expanded &amp; Word forms)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">5</span><span>"nine and eight hundredths" (Standard &amp; Expanded)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">6</span><span>$5 + 0.3 + 0.06 + 0.004$ (Standard &amp; Word)</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-2" onclick="toggleSolution(2)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-2">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 2</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) $34.032$:</strong> Expanded: $30 + 4 + 0.03 + 0.002$ &nbsp;|&nbsp; Word: thirty-four and thirty-two thousandths.</li>
+                        <li><strong>2) $0.982$:</strong> Expanded: $0.9 + 0.08 + 0.002$ &nbsp;|&nbsp; Word: nine hundred eighty-two thousandths.</li>
+                        <li><strong>3) $96.24$:</strong> Expanded: $90 + 6 + 0.2 + 0.04$ &nbsp;|&nbsp; Word: ninety-six and twenty-four hundredths.</li>
+                        <li><strong>4) $10.037$:</strong> Expanded: $10 + 0.03 + 0.007$ &nbsp;|&nbsp; Word: ten and thirty-seven thousandths.</li>
+                        <li><strong>5) "nine and eight hundredths":</strong> Standard: $9.08$ &nbsp;|&nbsp; Expanded: $9 + 0.08$.</li>
+                        <li><strong>6) $5 + 0.3 + 0.06 + 0.004$:</strong> Standard: $5.364$ &nbsp;|&nbsp; Word: five and three hundred sixty-four thousandths.</li>
+                    </ul>
+                    <div class="final-answer-pill">1) $30+4+0.03+0.002$, &nbsp; 4) $10+0.03+0.007$, &nbsp; 5) $9.08$, &nbsp; 6) $5.364$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 3 (Lesson 1: Place Name & Value of Underlined Digits — Pages 95–96) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Naming the Place &amp; Value of an Underlined Digit</div>
+                <div class="q-header">
+                    <span class="q-number">3</span>
+                    <span class="q-prompt-intro">Name the place of each underlined digit, then write its value:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>$78.3\underline{4}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>$0.72\underline{8}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">3</span><span>$8.\underline{6}9$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">4</span><span>$69.5\underline{6}8$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">5</span><span>$1\underline{4}.561$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">6</span><span>$0.\underline{9}02$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">7</span><span>$26.34\underline{8}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">8</span><span>Match: (a) six tenths, (b) sixteen thousandths, (c) sixty-six hundredths</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-3" onclick="toggleSolution(3)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-3">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 3</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) $78.3\underline{4}$:</strong> Place: Hundredths &nbsp;|&nbsp; Value: $0.04$</li>
+                        <li><strong>2) $0.72\underline{8}$:</strong> Place: Thousandths &nbsp;|&nbsp; Value: $0.008$</li>
+                        <li><strong>3) $8.\underline{6}9$:</strong> Place: Tenths &nbsp;|&nbsp; Value: $0.6$</li>
+                        <li><strong>4) $69.5\underline{6}8$:</strong> Place: Hundredths &nbsp;|&nbsp; Value: $0.06$</li>
+                        <li><strong>5) $1\underline{4}.561$:</strong> Place: Ones &nbsp;|&nbsp; Value: $4$</li>
+                        <li><strong>6) $0.\underline{9}02$:</strong> Place: Tenths &nbsp;|&nbsp; Value: $0.9$</li>
+                        <li><strong>7) $26.34\underline{8}$:</strong> Place: Thousandths &nbsp;|&nbsp; Value: $0.008$</li>
+                        <li><strong>8) Matching Words to Decimals:</strong> (a) six tenths $= 0.6$, &nbsp; (b) sixteen thousandths $= 0.016$, &nbsp; (c) sixty-six hundredths $= 0.66$.</li>
+                    </ul>
+                    <div class="final-answer-pill">1) $0.04$, &nbsp; 2) $0.008$, &nbsp; 3) $0.6$, &nbsp; 4) $0.06$, &nbsp; 5) $4$, &nbsp; 6) $0.9$, &nbsp; 7) $0.008$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 4 (Lesson 1: Problem Solving & Vocabulary Check — Page 97) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Problem Solving &amp; Vocabulary Check (Lesson 1, Page 97)</div>
+                <div class="q-header">
+                    <span class="q-number">4</span>
+                    <span class="q-prompt-intro">Solve each problem and complete the vocabulary statements:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">1</span><span><strong>Jacob's Race Time:</strong> Jacob finished a race in $23.637$ minutes. What are the place values for each digit $3$ that appears in Jacob's time?</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">2</span><span><strong>Aiden's Claim:</strong> Aiden says that "seven and twenty-eight hundredths" is the same as $7.28$. Is he correct? Explain.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">3</span><span><strong>Number Puzzle:</strong> Write a number in which the digit in the hundredths place is double the digit in the tenths place, then write the number in three different ways (standard, expanded, and word forms).</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">4</span><span><strong>Vocabulary Check:</strong> Complete each sentence:<br>
+                    (a) A _______________ is a number that has a digit in the tenths place, hundredths place, or thousandths place.<br>
+                    (b) A _______________ is a period that separates the ones and the tenths in a number.</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-4" onclick="toggleSolution(4)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-4">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 4</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Jacob's Time ($23.637$):</strong> The first $3$ is in the <strong>ones</strong> place (value $= 3$), and the second $3$ is in the <strong>hundredths</strong> place (value $= 0.03$).</li>
+                        <li><strong>2) Aiden's Claim:</strong> Yes, he is correct. "Seven" is $7$ in the ones place, "and" represents the decimal point, and "twenty-eight hundredths" is $28$ hundredths ($0.28$), giving $7.28$.</li>
+                        <li><strong>3) Number Puzzle (Example):</strong> Choose $4$ in the tenths place and $8$ in the hundredths place ($8 = 2 \times 4$):<br>
+                            • Standard form: $1.48$ &nbsp;|&nbsp; • Expanded form: $1 + 0.4 + 0.08$ &nbsp;|&nbsp; • Word form: one and forty-eight hundredths.</li>
+                        <li><strong>4) Vocabulary Check:</strong> (a) <strong>decimal</strong> &nbsp;&nbsp;|&nbsp;&nbsp; (b) <strong>decimal point</strong>.</li>
+                    </ul>
+                    <div class="final-answer-pill">1) Ones ($3$) &amp; Hundredths ($0.03$) &nbsp;|&nbsp; 2) Correct ($7.28$) &nbsp;|&nbsp; 4) decimal; decimal point</div>
+                </div>
+            </div>
+
+            <!-- =========================================================================
+                 LESSON 2: RELATE DECIMALS AND FRACTIONS (Pages 98–101)
+                 ========================================================================= -->
+            <h3 class="concept-group-header">📌 Lesson 2: Relate Decimals and Fractions (Denominators of 10, 100 &amp; 1,000)</h3>
+
+            <!-- QUESTION 5 (Lesson 2: Models & Examples — Pages 98–99) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Relating Fractions with Denominators 10, 100, and 1,000 to Decimals</div>
+                <div class="q-header">
+                    <span class="q-number">5</span>
+                    <span class="q-prompt-intro">Write each fraction or mixed number as a decimal and in word form (Pages 98–99):</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>$\dfrac{70}{100}$ (Earth's surface covered with water)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>$2\dfrac{3}{10}$ and $1\dfrac{32}{100}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">3</span><span>$\dfrac{115}{1,000}$ and $1\dfrac{3}{1,000}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">4</span><span>Complete the Step-by-Step table for: $\dfrac{75}{100}$, $\dfrac{7}{10}$, $\dfrac{62}{100}$, and $\dfrac{43}{1,000}$</span></div>
+                </div>
+
+                <div class="figure-container">
+                    <svg class="geometry-svg" viewBox="0 0 650 135">
+                        <!-- Visual 10x10 Grid for 70/100 (Earth's water) -->
+                        <g transform="translate(45, 12)">
+                            <!-- 7 shaded columns (orange/amber) -->
+                            <rect x="0" y="0" width="77" height="110" fill="#f59e0b"/>
+                            <!-- 3 unshaded columns -->
+                            <rect x="77" y="0" width="33" height="110" fill="#ffffff"/>
+                            <!-- Grid lines (10x10) -->
+                            <rect x="0" y="0" width="110" height="110" fill="none" stroke="#78350f" stroke-width="2"/>
+                            <path d="M11,0 v110 M22,0 v110 M33,0 v110 M44,0 v110 M55,0 v110 M66,0 v110 M77,0 v110 M88,0 v110 M99,0 v110
+                                     M0,11 h110 M0,22 h110 M0,33 h110 M0,44 h110 M0,55 h110 M0,66 h110 M0,77 h110 M0,88 h110 M0,99 h110"
+                                  stroke="#78350f" stroke-width="0.9"/>
+                        </g>
+                        <text x="195" y="45" class="measure-label" font-size="16" font-weight="800" fill="#0369a1">Earth's Water Model: 70 out of 100 squares shaded</text>
+                        <text x="195" y="75" class="measure-label" font-size="15">Fraction: 70/100 (or 7/10) &nbsp;→&nbsp; Decimal: 0.70 (or 0.7)</text>
+                        <text x="195" y="102" class="measure-label" font-size="15" fill="#15803d">Word form: seventy hundredths (or seven tenths)</text>
+                    </svg>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-5" onclick="toggleSolution(5)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-5">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 5</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Earth's Water ($\dfrac{70}{100}$):</strong> Decimal: $0.70$ or $0.7$ &nbsp;|&nbsp; Word: seventy hundredths or seven tenths.</li>
+                        <li><strong>2) Mixed Numbers (Tenths &amp; Hundredths):</strong><br>
+                            • $2\dfrac{3}{10} = 2.3$ (two and three tenths) &nbsp;&nbsp;|&nbsp;&nbsp; • $1\dfrac{32}{100} = 1.32$ (one and thirty-two hundredths).</li>
+                        <li><strong>3) Thousandths:</strong><br>
+                            • $\dfrac{115}{1,000} = 0.115$ (one hundred fifteen thousandths) &nbsp;&nbsp;|&nbsp;&nbsp; • $1\dfrac{3}{1,000} = 1.003$ (one and three thousandths).</li>
+                        <li><strong>4) Step-by-Step Table (Page 99):</strong><br>
+                            • $\dfrac{75}{100} \to$ seventy-five hundredths $\to 0.75$ &nbsp;&nbsp;|&nbsp;&nbsp; • $\dfrac{7}{10} \to$ seven tenths $\to 0.7$<br>
+                            • $\dfrac{62}{100} \to$ sixty-two hundredths $\to 0.62$ &nbsp;&nbsp;|&nbsp;&nbsp; • $\dfrac{43}{1,000} \to$ forty-three thousandths $\to 0.043$.</li>
+                    </ul>
+                    <div class="final-answer-pill">$\dfrac{75}{100}=0.75$, &nbsp; $\dfrac{7}{10}=0.7$, &nbsp; $\dfrac{62}{100}=0.62$, &nbsp; $\dfrac{43}{1,000}=0.043$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 6 (Lesson 2: Practice Page 100) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Practice: Matching &amp; Writing Fractions, Decimals, and Words (Page 100)</div>
+                <div class="q-header">
+                    <span class="q-number">6</span>
+                    <span class="q-prompt-intro">Write the fraction, decimal, and word form for each item below:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>Match to decimals: (a) $\dfrac{404}{1,000}$, (b) $\dfrac{4}{10}$, (c) $\dfrac{14}{100}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>Model 1: $5$ tenths shaded</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">3</span><span>Model 2: $28$ hundredths shaded</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">4</span><span>Model 3: $17$ thousandths shaded</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">5</span><span>Model 4: $8$ tenths shaded</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">6</span><span>Model 5: $65$ hundredths shaded</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-6" onclick="toggleSolution(6)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-6">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 6</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Matching (Part A):</strong> (a) $\dfrac{404}{1,000} = 0.404$, &nbsp; (b) $\dfrac{4}{10} = 0.4$, &nbsp; (c) $\dfrac{14}{100} = 0.14$.</li>
+                        <li><strong>2) $5$ tenths:</strong> Fraction: $\dfrac{5}{10}$ &nbsp;|&nbsp; Decimal: $0.5$ &nbsp;|&nbsp; Word: five tenths.</li>
+                        <li><strong>3) $28$ hundredths:</strong> Fraction: $\dfrac{28}{100}$ &nbsp;|&nbsp; Decimal: $0.28$ &nbsp;|&nbsp; Word: twenty-eight hundredths.</li>
+                        <li><strong>4) $17$ thousandths:</strong> Fraction: $\dfrac{17}{1,000}$ &nbsp;|&nbsp; Decimal: $0.017$ &nbsp;|&nbsp; Word: seventeen thousandths.</li>
+                        <li><strong>5) $8$ tenths:</strong> Fraction: $\dfrac{8}{10}$ &nbsp;|&nbsp; Decimal: $0.8$ &nbsp;|&nbsp; Word: eight tenths.</li>
+                        <li><strong>6) $65$ hundredths:</strong> Fraction: $\dfrac{65}{100}$ &nbsp;|&nbsp; Decimal: $0.65$ &nbsp;|&nbsp; Word: sixty-five hundredths.</li>
+                    </ul>
+                    <div class="final-answer-pill">$\dfrac{404}{1,000}=0.404, \ \dfrac{4}{10}=0.4, \ \dfrac{14}{100}=0.14, \ \dfrac{5}{10}=0.5, \ \dfrac{28}{100}=0.28, \ \dfrac{17}{1,000}=0.017$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 7 (Lesson 2: Problem Solving & Vocabulary — Page 101) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Problem Solving &amp; Vocabulary Check (Lesson 2, Page 101)</div>
+                <div class="q-header">
+                    <span class="q-number">7</span>
+                    <span class="q-prompt-intro">Solve each problem and complete the vocabulary sentence:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">1</span><span><strong>Water in the Human Body:</strong> Scientists say that about $\dfrac{7}{10}$ of a human's body is water. Write this fraction as a decimal.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">2</span><span><strong>Ava's Statement:</strong> Ava says that the word form of a fraction makes it easier to write the fraction as a decimal. Do you agree with her? Explain.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">3</span><span><strong>Henry's Decimal:</strong> Henry writes $\dfrac{32}{1,000}$ (or $\dfrac{32}{100}$) as $0.32$. Explain when $0.32$ is correct and how $\dfrac{32}{1,000}$ is written as a decimal.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">4</span><span><strong>Vocabulary Check:</strong> Complete the sentence: Fractions and decimals that name the same amount are _______________ to each other.</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-7" onclick="toggleSolution(7)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-7">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 7</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Human Body Water:</strong> $\dfrac{7}{10} = 0.7$.</li>
+                        <li><strong>2) Ava's Statement:</strong> Yes, because a fraction with a denominator of $10, 100,$ or $1,000$ is read using the exact same word form as its decimal equivalent (for example, $\dfrac{7}{10}$ and $0.7$ are both read as "seven tenths"), which directly tells you the place value of the last digit.</li>
+                        <li><strong>3) Henry's Decimal:</strong> For $\dfrac{32}{100}$ ("thirty-two hundredths"), $0.32$ is <strong>correct</strong>. However, if the fraction is $\dfrac{32}{1,000}$ ("thirty-two thousandths"), the $2$ must be in the thousandths place, so it is written as $0.032$.</li>
+                        <li><strong>4) Vocabulary Check:</strong> <strong>equivalent</strong> (or related).</li>
+                    </ul>
+                    <div class="final-answer-pill">1) $0.7$ &nbsp;|&nbsp; 2) Agree (same place-value name) &nbsp;|&nbsp; 3) $\dfrac{32}{100}=0.32; \ \dfrac{32}{1,000}=0.032$</div>
+                </div>
+            </div>
+
+            <!-- =========================================================================
+                 LESSON 3: PLACE VALUE TO DECIMALS (Pages 102–105)
+                 ========================================================================= -->
+            <h3 class="concept-group-header">📌 Lesson 3: Place Value to Decimals (Multiplying &amp; Dividing by 10, 100, and 1,000)</h3>
+
+            <!-- QUESTION 8 (Lesson 3: Place-Value Shifts — Pages 102–103) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Shifting Digits in a Place-Value Chart ($\times 10$ and $\times \frac{1}{10}$)</div>
+                <div class="q-header">
+                    <span class="q-number">8</span>
+                    <span class="q-prompt-intro">Use the place-value shift diagrams below to answer each question:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>In $22.222$, how does the value of a digit change as you move one place to the left vs. one place to the right?</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>Find $6.347 \times 10$ and $1.59 \times \dfrac{1}{10}$.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">3</span><span><strong>Pacific Ocean Salinity:</strong> The average salinity in the Pacific Ocean is $35$ parts per thousand. Lucas writes $35 = 3.5 \times 100$. Is his answer correct? Explain.</span></div>
+                </div>
+
+                <div class="figure-container">
+                    <svg class="geometry-svg" viewBox="0 0 720 140">
+                        <!-- Left Chart: 6.347 x 10 = 63.470 -->
+                        <rect x="20" y="15" width="320" height="108" rx="10" fill="#f8fafc" stroke="#0284c7" stroke-width="1.8"/>
+                        <text x="180" y="34" class="measure-label" fill="#0369a1" font-weight="800" text-anchor="middle">6.347 × 10 = 63.470 (Shift 1 Place Left)</text>
+                        <line x1="20" y1="44" x2="340" y2="44" stroke="#bae6fd" stroke-width="1.5"/>
+                        <text x="55" y="62" class="measure-label" font-size="12" text-anchor="middle">Tens</text>
+                        <text x="115" y="62" class="measure-label" font-size="12" text-anchor="middle">Ones</text>
+                        <text x="180" y="62" class="measure-label" font-size="12" text-anchor="middle">Tenths</text>
+                        <text x="245" y="62" class="measure-label" font-size="12" text-anchor="middle">Hund.</text>
+                        <text x="305" y="62" class="measure-label" font-size="12" text-anchor="middle">Thous.</text>
+                        <!-- Row 1: 6.347 -->
+                        <text x="115" y="86" font-weight="800" font-size="17" text-anchor="middle">6</text>
+                        <circle cx="147" cy="83" r="3" fill="#be123c"/>
+                        <text x="180" y="86" font-weight="800" font-size="17" text-anchor="middle">3</text>
+                        <text x="245" y="86" font-weight="800" font-size="17" text-anchor="middle">4</text>
+                        <text x="305" y="86" font-weight="800" font-size="17" text-anchor="middle">7</text>
+                        <!-- Row 2: 63.470 -->
+                        <text x="55" y="114" font-weight="800" font-size="17" fill="#0284c7" text-anchor="middle">6</text>
+                        <text x="115" y="114" font-weight="800" font-size="17" fill="#0284c7" text-anchor="middle">3</text>
+                        <circle cx="147" cy="111" r="3" fill="#be123c"/>
+                        <text x="180" y="114" font-weight="800" font-size="17" fill="#0284c7" text-anchor="middle">4</text>
+                        <text x="245" y="114" font-weight="800" font-size="17" fill="#0284c7" text-anchor="middle">7</text>
+                        <text x="305" y="114" font-weight="800" font-size="17" fill="#0284c7" text-anchor="middle">0</text>
+                        <!-- Shift Arrows (Left) -->
+                        <path d="M105,88 L68,102 M170,88 L128,102 M235,88 L192,102 M295,88 L256,102" stroke="#d97706" stroke-width="1.6" fill="none"/>
+
+                        <!-- Right Chart: 1.59 x 1/10 = 0.159 -->
+                        <rect x="380" y="15" width="320" height="108" rx="10" fill="#f8fafc" stroke="#be123c" stroke-width="1.8"/>
+                        <text x="540" y="34" class="measure-label" fill="#be123c" font-weight="800" text-anchor="middle">1.59 × (1/10) = 0.159 (Shift 1 Place Right)</text>
+                        <line x1="380" y1="44" x2="700" y2="44" stroke="#fecdd3" stroke-width="1.5"/>
+                        <text x="415" y="62" class="measure-label" font-size="12" text-anchor="middle">Tens</text>
+                        <text x="475" y="62" class="measure-label" font-size="12" text-anchor="middle">Ones</text>
+                        <text x="540" y="62" class="measure-label" font-size="12" text-anchor="middle">Tenths</text>
+                        <text x="605" y="62" class="measure-label" font-size="12" text-anchor="middle">Hund.</text>
+                        <text x="665" y="62" class="measure-label" font-size="12" text-anchor="middle">Thous.</text>
+                        <!-- Row 1: 1.59 -->
+                        <text x="475" y="86" font-weight="800" font-size="17" text-anchor="middle">1</text>
+                        <circle cx="507" cy="83" r="3" fill="#be123c"/>
+                        <text x="540" y="86" font-weight="800" font-size="17" text-anchor="middle">5</text>
+                        <text x="605" y="86" font-weight="800" font-size="17" text-anchor="middle">9</text>
+                        <!-- Row 2: 0.159 -->
+                        <text x="475" y="114" font-weight="800" font-size="17" fill="#be123c" text-anchor="middle">0</text>
+                        <circle cx="507" cy="111" r="3" fill="#be123c"/>
+                        <text x="540" y="114" font-weight="800" font-size="17" fill="#be123c" text-anchor="middle">1</text>
+                        <text x="605" y="114" font-weight="800" font-size="17" fill="#be123c" text-anchor="middle">5</text>
+                        <text x="665" y="114" font-weight="800" font-size="17" fill="#be123c" text-anchor="middle">9</text>
+                        <!-- Shift Arrows (Right) -->
+                        <path d="M485,88 L528,102 M550,88 L593,102 M615,88 L654,102" stroke="#d97706" stroke-width="1.6" fill="none"/>
+                    </svg>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-8" onclick="toggleSolution(8)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-8">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 8</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Place-Value Rule in $22.222$:</strong> A digit in one place represents <strong>$10$ times as much</strong> as it represents in the place to its right, and <strong>$\dfrac{1}{10}$ of</strong> what it represents in the place to its left (e.g., $2\text{ tenths} \times 10 = 2\text{ ones}$, and $2\text{ tenths} \times \dfrac{1}{10} = 2\text{ hundredths}$).</li>
+                        <li><strong>2) Shifting Digits:</strong> $6.347 \times 10 = 63.470$ (or $63.47$), and $1.59 \times \dfrac{1}{10} = 0.159$.</li>
+                        <li><strong>3) Lucas's Statement ($35 = 3.5 \times 100$):</strong> Lucas is <strong>incorrect</strong>. The decimal point in $3.5$ moves <em>one</em> place to the right to become $35$, so $3.5$ is multiplied by $10$ ($35 = 3.5 \times 10$), not $100$.</li>
+                    </ul>
+                    <div class="final-answer-pill">$6.347 \times 10 = 63.47$, &nbsp; $1.59 \times \dfrac{1}{10} = 0.159$, &nbsp; $35 = 3.5 \times 10$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 9 (Lesson 3: Step-by-Step & Practice — Pages 103–104) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Multiplying &amp; Dividing Decimals by 10, 100, and 1,000 (Pages 103–104)</div>
+                <div class="q-header">
+                    <span class="q-number">9</span>
+                    <span class="q-prompt-intro">Find the missing factor, product, or quotient in each statement:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>$4 = 0.4 \times \underline{\hspace{1cm}}$ and $30 = 0.3 \times \underline{\hspace{1cm}}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>$4,860 = 48.6 \times \underline{\hspace{1cm}}$ and $83.1 = 8.31 \times \underline{\hspace{1cm}}$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">3</span><span>$8.126 \times 100$ and $24.92 \times 10$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">4</span><span>$4.7 \times 10$ and $36.8547 \times 1,000$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">5</span><span>$2.017 \times 10$ and $0.355 \times 100$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">6</span><span>$165.3 \div 10$ and $614 \div 100$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">7</span><span>$7\text{ tenths} \times 10$ &nbsp; ($\implies 0.7 \times 10$)</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">8</span><span>$5\text{ tenths} \times \dfrac{1}{10}$ &nbsp; ($\implies 0.5 \times \dfrac{1}{10}$)</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-9" onclick="toggleSolution(9)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-9">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 9</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1)</strong> $4 = 0.4 \times \mathbf{10}$ &nbsp;and&nbsp; $30 = 0.3 \times \mathbf{100}$</li>
+                        <li><strong>2)</strong> $4,860 = 48.6 \times \mathbf{100}$ &nbsp;and&nbsp; $83.1 = 8.31 \times \mathbf{10}$</li>
+                        <li><strong>3)</strong> $8.126 \times 100 = \mathbf{812.6}$ &nbsp;and&nbsp; $24.92 \times 10 = \mathbf{249.2}$</li>
+                        <li><strong>4)</strong> $4.7 \times 10 = \mathbf{47}$ &nbsp;and&nbsp; $36.8547 \times 1,000 = \mathbf{36,854.7}$</li>
+                        <li><strong>5)</strong> $2.017 \times 10 = \mathbf{20.17}$ &nbsp;and&nbsp; $0.355 \times 100 = \mathbf{35.5}$</li>
+                        <li><strong>6)</strong> $165.3 \div 10 = \mathbf{16.53}$ &nbsp;and&nbsp; $614 \div 100 = \mathbf{6.14}$</li>
+                        <li><strong>7)</strong> $7\text{ tenths} \times 10 = 7\text{ ones} = \mathbf{7}$ &nbsp;($0.7 \times 10 = 7$)</li>
+                        <li><strong>8)</strong> $5\text{ tenths} \times \dfrac{1}{10} = 5\text{ hundredths} = \mathbf{0.05}$ &nbsp;($0.5 \times \dfrac{1}{10} = 0.05$)</li>
+                    </ul>
+                    <div class="final-answer-pill">3) $812.6; \ 249.2$ &nbsp;|&nbsp; 4) $47; \ 36,854.7$ &nbsp;|&nbsp; 5) $20.17; \ 35.5$ &nbsp;|&nbsp; 6) $16.53; \ 6.14$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 10 (Lesson 3: Multiple-Choice Practice Part C — Page 104) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Multiple-Choice Practice: Multiplying by Powers of 10 (Page 104, Part C)</div>
+                <div class="q-header">
+                    <span class="q-number">10</span>
+                    <span class="q-prompt-intro">Choose the correct product for item (2) below, and solve items (1) and (3) in your workspace:</span>
+                </div>
+
+                <div class="q-main-question">
+                    Find the product: $1.27 \times \dfrac{1}{10} = \text{?}$<br>
+                    <small style="font-weight: 600; color: #475569;">• Item (1): $5.6 \times 10 \to \{560, \ 56, \ 0.56, \ 0.056\}$ &nbsp;&nbsp;|&nbsp;&nbsp; • Item (3): $0.891 \times 100 \to \{8.91, \ 89.1, \ 891, \ 89,100\}$</small>
+                </div>
+
+                <div class="choices-grid" data-correct="a">
+                    <button class="choice-btn" onclick="selectChoice(this, 'a')">
+                        <span class="choice-letter">(A)</span>
+                        <span>$0.127$</span>
+                        <span class="choice-status-badge"></span>
+                    </button>
+                    <button class="choice-btn" onclick="selectChoice(this, 'b')">
+                        <span class="choice-letter">(B)</span>
+                        <span>$1.27$</span>
+                        <span class="choice-status-badge"></span>
+                    </button>
+                    <button class="choice-btn" onclick="selectChoice(this, 'c')">
+                        <span class="choice-letter">(C)</span>
+                        <span>$12.7$</span>
+                        <span class="choice-status-badge"></span>
+                    </button>
+                    <button class="choice-btn" onclick="selectChoice(this, 'd')">
+                        <span class="choice-letter">(D)</span>
+                        <span>$127$</span>
+                        <span class="choice-status-badge"></span>
+                    </button>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-10" onclick="toggleSolution(10)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-10">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 10</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>Item (2) [Main Question]:</strong> Multiplying by $\dfrac{1}{10}$ moves the decimal point $1$ place to the left: $1.27 \times \dfrac{1}{10} = \mathbf{0.127}$ <strong>(Choice A)</strong>.</li>
+                        <li><strong>Item (1):</strong> Multiplying by $10$ moves the decimal point $1$ place to the right: $5.6 \times 10 = \mathbf{56}$.</li>
+                        <li><strong>Item (3):</strong> Multiplying by $100$ moves the decimal point $2$ places to the right: $0.891 \times 100 = \mathbf{89.1}$.</li>
+                    </ul>
+                    <div class="final-answer-pill">(1) $56$ &nbsp;|&nbsp; (2) $0.127$ (Choice A) &nbsp;|&nbsp; (3) $89.1$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 11 (Lesson 3: Problem Solving & Vocabulary Check — Page 105) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Problem Solving &amp; Vocabulary Check (Lesson 3, Page 105)</div>
+                <div class="q-header">
+                    <span class="q-number">11</span>
+                    <span class="q-prompt-intro">Solve each problem and correct the false vocabulary statements:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">1</span><span><strong>Monkey's Weight:</strong> A monkey weighed $0.8\text{ kg}$ at birth. After $2$ years, the monkey weighed $10$ times more than it did at birth. What is the weight of the monkey now?</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">2</span><span><strong>Samir's Claim:</strong> Samir says $0.9$ and $0.090$ are equivalent. Is he correct? Explain.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">3</span><span><strong>Ethan's Calculation:</strong> Ethan solves $0.346 \times 100 = 34.6$. Is he correct? Explain.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">4</span><span><strong>Vocabulary Check — Correct each statement:</strong><br>
+                    (a) "The number $38.12$ written in standard form is $30 + 8 + 0.1 + 0.02$."<br>
+                    (b) "Eighty-two hundredths is written as $0.082$."</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-11" onclick="toggleSolution(11)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-11">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 11</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Monkey's Weight:</strong> $0.8 \times 10 = 8\text{ kg}$.</li>
+                        <li><strong>2) Samir's Claim:</strong> No, he is <strong>incorrect</strong>. In $0.9$, the digit $9$ is in the tenths place ($0.9 = 0.900$), whereas in $0.090$, the digit $9$ is in the hundredths place ($0.09$). Since $0.900 \neq 0.090$, they are not equivalent.</li>
+                        <li><strong>3) Ethan's Calculation:</strong> Yes, Ethan is <strong>correct</strong>. Multiplying $0.346$ by $100$ moves the decimal point $2$ places to the right, giving $34.6$.</li>
+                        <li><strong>4) Correcting the Vocabulary Statements:</strong><br>
+                            • (a) $30 + 8 + 0.1 + 0.02$ is the <strong>expanded form</strong> (not standard form) of $38.12$.<br>
+                            • (b) Eighty-two hundredths is written as $\mathbf{0.82}$ (whereas $0.082$ is eighty-two <em>thousandths</em>).</li>
+                    </ul>
+                    <div class="final-answer-pill">1) $8\text{ kg}$ &nbsp;|&nbsp; 2) Incorrect ($0.9 \neq 0.090$) &nbsp;|&nbsp; 3) Correct ($34.6$) &nbsp;|&nbsp; 4) Expanded form; $0.82$</div>
+                </div>
+            </div>
+
+            <!-- =========================================================================
+                 LESSON 4: COMPARE DECIMALS (Pages 107–110)
+                 ========================================================================= -->
+            <h3 class="concept-group-header">📌 Lesson 4: Compare Decimals (Number Line, Place Value &amp; Ordering)</h3>
+
+            <!-- QUESTION 12 (Lesson 4: Number Line & Place-Value Comparison — Pages 107–108) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Comparing Decimals Using a Number Line &amp; Place Value</div>
+                <div class="q-header">
+                    <span class="q-number">12</span>
+                    <span class="q-prompt-intro">Use the number line and place-value comparison rules to answer each question:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>Blake is $1.75\text{ m}$ tall and Eloise is $1.68\text{ m}$ tall. Who is taller?</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>Compare $0.42$ and $0.423$ using $>$, $<$, or $=$.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">3</span><span><strong>Planetary Distances:</strong> The distance between Venus and Jupiter is $4.48\text{ AU}$, while the distance between Mercury and Jupiter is $4.81\text{ AU}$. Which distance is shorter?</span></div>
+                </div>
+
+                <div class="figure-container">
+                    <svg class="geometry-svg" viewBox="0 0 680 120">
+                        <!-- Number Line from 1.60 to 1.80 -->
+                        <line x1="40" y1="68" x2="640" y2="68" stroke="#0f172a" stroke-width="2.5"/>
+                        <!-- Arrowheads -->
+                        <polygon points="32,68 46,62 46,74" fill="#0f172a"/>
+                        <polygon points="648,68 634,62 634,74" fill="#0f172a"/>
+
+                        <!-- Major Ticks: 1.60 (x=80), 1.70 (x=340), 1.80 (x=600) -> 26px per 0.01 -->
+                        <line x1="80" y1="54" x2="80" y2="82" stroke="#0f172a" stroke-width="2.2"/>
+                        <text x="80" y="104" class="measure-label" font-weight="700" text-anchor="middle">1.60</text>
+
+                        <line x1="340" y1="54" x2="340" y2="82" stroke="#0f172a" stroke-width="2.2"/>
+                        <text x="340" y="104" class="measure-label" font-weight="700" text-anchor="middle">1.70</text>
+
+                        <line x1="600" y1="54" x2="600" y2="82" stroke="#0f172a" stroke-width="2.2"/>
+                        <text x="600" y="104" class="measure-label" font-weight="700" text-anchor="middle">1.80</text>
+
+                        <!-- Eloise at 1.68 -> x = 80 + 8*26 = 288 -->
+                        <line x1="288" y1="57" x2="288" y2="79" stroke="#be123c" stroke-width="2"/>
+                        <circle cx="288" cy="68" r="5" fill="#be123c"/>
+                        <text x="288" y="25" class="measure-label" fill="#be123c" font-weight="800" text-anchor="middle">Eloise</text>
+                        <path d="M288,30 L288,52" stroke="#ea580c" stroke-width="2.2"/>
+                        <polygon points="288,56 283,46 293,46" fill="#ea580c"/>
+                        <text x="288" y="104" class="measure-label" fill="#be123c" font-weight="800" text-anchor="middle">1.68</text>
+
+                        <!-- Blake at 1.75 -> x = 340 + 5*26 = 470 -->
+                        <line x1="470" y1="57" x2="470" y2="79" stroke="#0284c7" stroke-width="2"/>
+                        <circle cx="470" cy="68" r="5" fill="#0284c7"/>
+                        <text x="470" y="25" class="measure-label" fill="#0284c7" font-weight="800" text-anchor="middle">Blake</text>
+                        <path d="M470,30 L470,52" stroke="#ea580c" stroke-width="2.2"/>
+                        <polygon points="470,56 465,46 475,46" fill="#ea580c"/>
+                        <text x="470" y="104" class="measure-label" fill="#0284c7" font-weight="800" text-anchor="middle">1.75</text>
+                    </svg>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-12" onclick="toggleSolution(12)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-12">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 12</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Blake vs. Eloise:</strong> On the number line, $1.75$ is to the right of $1.68$ (and in the tenths place, $7 > 6$), so $1.75 > 1.68$. <strong>Blake is taller.</strong></li>
+                        <li><strong>2) Comparing $0.42$ and $0.423$:</strong> Write $0.42$ as $0.420$. Comparing the thousandths digits ($0 < 3$) gives $0.420 < 0.423 \implies \mathbf{0.42 < 0.423}$.</li>
+                        <li><strong>3) Planetary Distances:</strong> Compare $4.48$ and $4.81$. The ones digits are equal ($4 = 4$), and in the tenths place $4 < 8$, so $4.48 < 4.81$. <strong>The distance between Venus and Jupiter ($4.48\text{ AU}$) is shorter.</strong></li>
+                    </ul>
+                    <div class="final-answer-pill">1) Blake ($1.75 > 1.68$) &nbsp;|&nbsp; 2) $0.42 < 0.423$ &nbsp;|&nbsp; 3) Venus to Jupiter ($4.48 < 4.81$)</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 13 (Lesson 4: Step-by-Step & Practice Comparisons — Pages 108–109) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Comparing Decimals Using $&gt;$, $&lt;$, or $=$ (Pages 108–109)</div>
+                <div class="q-header">
+                    <span class="q-number">13</span>
+                    <span class="q-prompt-intro">Compare each pair of decimals using $&gt;$, $&lt;$, or $=$, and sort the given numbers:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item"><span class="sub-q-badge">1</span><span>$7.301 \ \bigcirc \ 7.30$ &nbsp;and&nbsp; $0.30 \ \bigcirc \ 0.03$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">2</span><span>$2.008 \ \bigcirc \ 2.0008$ &nbsp;and&nbsp; $5.20 \ \bigcirc \ 5.2$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">3</span><span>$9.61 \ \bigcirc \ 9.8$ &nbsp;and&nbsp; $4.30 \ \bigcirc \ 4.32$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">4</span><span>$0.357 \ \bigcirc \ 0.29$ &nbsp;and&nbsp; $0.102 \ \bigcirc \ 0.105$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">5</span><span>$3.02 \ \bigcirc \ 3.20$ &nbsp;and&nbsp; $0.326 \ \bigcirc \ 0.400$</span></div>
+                    <div class="sub-q-item"><span class="sub-q-badge">6</span><span>$12.8 \ \bigcirc \ 12.800$ &nbsp;and&nbsp; $6.75 \ \bigcirc \ 6.747$</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">7</span><span><strong>Sorting Box (Page 109, Part B):</strong> Sort $\{7.6, \ 7.501, \ 7.41, \ 7.179, \ 7.005, \ 7.713\}$ into: (a) <em>Numbers less than $7.5$</em> and (b) <em>Numbers greater than $7.5$</em>.</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-13" onclick="toggleSolution(13)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-13">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 13</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1)</strong> $7.301 \mathbf{>} 7.30$ (since $7.301 > 7.300$) &nbsp;&nbsp;|&nbsp;&nbsp; $0.30 \mathbf{>} 0.03$</li>
+                        <li><strong>2)</strong> $2.008 \mathbf{>} 2.0008$ &nbsp;&nbsp;|&nbsp;&nbsp; $5.20 \mathbf{=} 5.2$</li>
+                        <li><strong>3)</strong> $9.61 \mathbf{<} 9.8$ (since $6 < 8$ in tenths) &nbsp;&nbsp;|&nbsp;&nbsp; $4.30 \mathbf{<} 4.32$</li>
+                        <li><strong>4)</strong> $0.357 \mathbf{>} 0.29$ (since $3 > 2$ in tenths) &nbsp;&nbsp;|&nbsp;&nbsp; $0.102 \mathbf{<} 0.105$</li>
+                        <li><strong>5)</strong> $3.02 \mathbf{<} 3.20$ &nbsp;&nbsp;|&nbsp;&nbsp; $0.326 \mathbf{<} 0.400$</li>
+                        <li><strong>6)</strong> $12.8 \mathbf{=} 12.800$ &nbsp;&nbsp;|&nbsp;&nbsp; $6.75 \mathbf{>} 6.747$ (since $6.750 > 6.747$)</li>
+                        <li><strong>7) Sorting Box (compared to $7.500$):</strong><br>
+                            • <strong>Less than $7.5$:</strong> $7.41, \ 7.179, \ 7.005$<br>
+                            • <strong>Greater than $7.5$:</strong> $7.6, \ 7.501, \ 7.713$</li>
+                    </ul>
+                    <div class="final-answer-pill">Less than $7.5$: $\{7.005, 7.179, 7.41\}$ &nbsp;|&nbsp; Greater than $7.5$: $\{7.501, 7.6, 7.713\}$</div>
+                </div>
+            </div>
+
+            <!-- QUESTION 14 (Lesson 4: Problem Solving & Vocabulary Check — Page 110) -->
+            <div class="question-card">
+                <div class="concept-badge">📌 Problem Solving &amp; Error Analysis on Comparing Decimals (Page 110)</div>
+                <div class="q-header">
+                    <span class="q-number">14</span>
+                    <span class="q-prompt-intro">Solve each problem and complete the vocabulary sentence:</span>
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">1</span><span><strong>Running Distance:</strong> Daja ran $2.8\text{ miles}$. Madison ran $2.4\text{ miles}$. Who ran farther?</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">2</span><span><strong>Mika's Claim:</strong> Mika says that $3.8$ is equivalent to $3.800$. Do you agree with her? Justify your answer.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">3</span><span><strong>Abdul's Number Line Error:</strong> Abdul compares $2.3$ and $2.03$ on the number line and writes $2.30 = 2.03$. Is his answer correct? Correct the answer if it is incorrect.</span></div>
+                    <div class="sub-q-item" style="grid-column: 1 / -1;"><span class="sub-q-badge">4</span><span><strong>Vocabulary Check:</strong> Complete the sentence: _________________________ are decimals that name the same amount.</span></div>
+                </div>
+
+                <div class="card-actions">
+                    <span class="workspace-label">✍️ Student Workspace (20 Lines)</span>
+                    <button class="btn-3d primary" id="btn-sol-14" onclick="toggleSolution(14)">
+                        <span>💡 Show Solution</span>
+                    </button>
+                </div>
+                <div class="workspace"></div>
+
+                <div class="solution-box" id="sol-14">
+                    <div class="solution-header">
+                        <span>✅ Model Step-by-Step Solution</span>
+                        <span>Question 14</span>
+                    </div>
+                    <ul class="solution-steps">
+                        <li><strong>1) Daja vs. Madison:</strong> Since $2.8 > 2.4$ ($8\text{ tenths} > 4\text{ tenths}$), <strong>Daja ran farther</strong>.</li>
+                        <li><strong>2) Mika's Claim:</strong> Yes, I agree with Mika. Annexing zeros to the right of the last decimal digit does not change the value of the decimal: $3 + \dfrac{8}{10} = 3 + \dfrac{800}{1,000} \implies 3.8 = 3.80 = 3.800$.</li>
+                        <li><strong>3) Abdul's Comparison ($2.3$ vs. $2.03$):</strong> No, Abdul is <strong>incorrect</strong>. In $2.30$, there is a $3$ in the tenths place, whereas in $2.03$, there is a $0$ in the tenths place ($2.03$ lies between $2.0$ and $2.1$, while $2.30$ is at $2.3$). The correct comparison is $\mathbf{2.30 > 2.03}$ (or $2.3 > 2.03$).</li>
+                        <li><strong>4) Vocabulary Check:</strong> <strong>Equivalent decimals</strong> are decimals that name the same amount.</li>
+                    </ul>
+                    <div class="final-answer-pill">1) Daja ($2.8 > 2.4$) &nbsp;|&nbsp; 2) Agree ($3.8 = 3.800$) &nbsp;|&nbsp; 3) Incorrect: $2.30 > 2.03$ &nbsp;|&nbsp; 4) Equivalent decimals</div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="footer-info">
+                <span>📐 Comprehensive Revision: Decimals (Lessons 1–4)</span>
+                <span>•</span>
+                <span>👨‍🏫 Ahmed Abd El-Motaal (📞 01019775590)</span>
+            </div>
+            <a href="https://youtube.com/@mrmotaal?si=myKXUVJPjbDazSVJ" target="_blank" rel="noopener noreferrer" class="youtube-badge" title="Subscribe on YouTube: @mrMotaal">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span>YouTube: @mrMotaal</span>
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        const TOTAL_QUESTIONS = 14;
+        const WRITING_LINES_COUNT = 20;
+        let allSolutionsVisible = false;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.workspace').forEach(ws => {
+                ws.innerHTML = '<div class="writing-line"></div>'.repeat(WRITING_LINES_COUNT);
+            });
+
+            if (typeof renderMathInElement === "function") {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false }
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+
+        function selectChoice(buttonEl, chosenOption) {
+            const parentGrid = buttonEl.closest('.choices-grid');
+            const correctOption = parentGrid.getAttribute('data-correct');
+            const allButtons = parentGrid.querySelectorAll('.choice-btn');
+
+            allButtons.forEach(btn => {
+                btn.classList.remove('selected-correct', 'selected-wrong');
+                const badge = btn.querySelector('.choice-status-badge');
+                if (badge) badge.textContent = '';
+            });
+
+            const badge = buttonEl.querySelector('.choice-status-badge');
+            if (chosenOption === correctOption) {
+                buttonEl.classList.add('selected-correct');
+                if (badge) badge.textContent = '✓ Correct';
+            } else {
+                buttonEl.classList.add('selected-wrong');
+                if (badge) badge.textContent = '✗ Try Again';
+            }
+        }
+
+        function toggleSolution(qNum) {
+            const solBox = document.getElementById('sol-' + qNum);
+            const btn = document.getElementById('btn-sol-' + qNum);
+            const isShowing = solBox.classList.toggle('show');
+
+            if (isShowing) {
+                btn.classList.add('active');
+                btn.innerHTML = '<span>🔼 Hide Solution</span>';
+            } else {
+                btn.classList.remove('active');
+                btn.innerHTML = '<span>💡 Show Solution</span>';
+            }
+        }
+
+        function toggleAllSolutions() {
+            allSolutionsVisible = !allSolutionsVisible;
+            const globalBtn = document.getElementById('global-toggle-btn');
+
+            for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
+                const solBox = document.getElementById('sol-' + i);
+                const btn = document.getElementById('btn-sol-' + i);
+                if (!solBox || !btn) continue;
+
+                if (allSolutionsVisible) {
+                    solBox.classList.add('show');
+                    btn.classList.add('active');
+                    btn.innerHTML = '<span>🔼 Hide Solution</span>';
+                } else {
+                    solBox.classList.remove('show');
+                    btn.classList.remove('active');
+                    btn.innerHTML = '<span>💡 Show Solution</span>';
+                }
+            }
+
+            if (globalBtn) {
+                if (allSolutionsVisible) {
+                    globalBtn.classList.add('active');
+                    globalBtn.innerHTML = '<span>🙈 Hide All Solutions</span>';
+                } else {
+                    globalBtn.classList.remove('active');
+                    globalBtn.innerHTML = '<span>👁️ Show All Solutions</span>';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
